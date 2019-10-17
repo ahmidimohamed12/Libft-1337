@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mahmidi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/16 16:41:20 by mahmidi           #+#    #+#             */
-/*   Updated: 2019/10/17 08:56:57 by mahmidi          ###   ########.fr       */
+/*   Created: 2019/10/17 07:54:24 by mahmidi           #+#    #+#             */
+/*   Updated: 2019/10/17 08:54:25 by mahmidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
-int main()
+void	ft_putnbr_fd(int n, int fd)
 {
-	ft_putchar_fd('a', 1);
-	ft_putnbr(ft_atoi("445"));
-	return 0;
+	if (n < 0)
+	{
+		n = -n;
+		ft_putchar_fd('-', fd);
+	}
+	if (n > 9)
+	{
+		ft_putnbr_fd((n / 10), fd);
+		ft_putchar_fd((n % 10 + '0'),fd);
+	}
+	else
+	{
+		ft_putchar_fd((n + '0'), fd);
+	}
 }

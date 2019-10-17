@@ -1,21 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mahmidi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/16 16:41:20 by mahmidi           #+#    #+#             */
-/*   Updated: 2019/10/17 08:56:57 by mahmidi          ###   ########.fr       */
+/*   Created: 2019/10/17 07:37:11 by mahmidi           #+#    #+#             */
+/*   Updated: 2019/10/17 07:49:35 by mahmidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
-int main()
+char	*ft_strnstr(const char *s1, const char *s2)
 {
-	ft_putchar_fd('a', 1);
-	ft_putnbr(ft_atoi("445"));
-	return 0;
+	size_t	i;
+	char	*j;
+	char	*k;
+
+	if (!*s2)
+		return ((char *)s1);
+	while (n-- && *s1)
+	{
+		if (*s1 == *s2)
+		{
+			i = n;
+			j = (char *)s1 + 1;
+			k = (char *)s2 + 1;
+			while (i-- && *j && *k && *j == *k)
+			{
+				++j;
+				++k;
+			}
+			if (!*k)
+				return ((char *)s1);
+		}
+		++s1;
+	}
+	return (NULL);
 }

@@ -6,14 +6,13 @@
 /*   By: mahmidi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 16:36:23 by mahmidi           #+#    #+#             */
-/*   Updated: 2019/10/16 16:36:28 by mahmidi          ###   ########.fr       */
+/*   Updated: 2019/10/17 07:14:04 by mahmidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
-int ft_toupper(int a)
+int	ft_toupper(int a)
 {
-    return (a >= 97 && a <= 122);
+	return (a >= 97 && a <= 122);
 }

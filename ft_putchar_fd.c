@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mahmidi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/16 16:41:20 by mahmidi           #+#    #+#             */
-/*   Updated: 2019/10/17 08:56:57 by mahmidi          ###   ########.fr       */
+/*   Created: 2019/10/17 05:03:32 by mahmidi           #+#    #+#             */
+/*   Updated: 2019/10/17 07:10:08 by mahmidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "libft.h"
 
-int main()
+void	ft_putchar_fd(char c, int fd)
 {
-	ft_putchar_fd('a', 1);
-	ft_putnbr(ft_atoi("445"));
-	return 0;
+	write(fd, (unsigned char *)(&c), 1);
 }

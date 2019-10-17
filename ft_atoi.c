@@ -1,21 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mahmidi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/16 16:41:20 by mahmidi           #+#    #+#             */
-/*   Updated: 2019/10/17 08:56:57 by mahmidi          ###   ########.fr       */
+/*   Created: 2019/10/17 05:25:43 by mahmidi           #+#    #+#             */
+/*   Updated: 2019/10/17 09:12:33 by mahmidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
-int main()
+long	ft_atoi(const char *str)
 {
-	ft_putchar_fd('a', 1);
-	ft_putnbr(ft_atoi("445"));
-	return 0;
+	long	sign;
+	long	nbr;
+
+	sign = 1;
+	while(*str == ' ' || *str == '\f' || *str == '\n' || *str =='\r' ||
+			*str == '\t' || *str== '\v')
+		str++;
+	if(*str == '-' || *str == '+')
+	{
+		if(*str == '-')
+			sign = -1;
+		str++;
+	}
+	nbr = 0;
+	while(ft_isdigit((int)*str))
+	{
+		nbr = nbr * 10 + *str - '0';
+		str++;
+	}
+	return	(sign * nbr);
 }
