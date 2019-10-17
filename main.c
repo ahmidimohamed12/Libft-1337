@@ -6,16 +6,18 @@
 /*   By: mahmidi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 16:41:20 by mahmidi           #+#    #+#             */
-/*   Updated: 2019/10/17 08:56:57 by mahmidi          ###   ########.fr       */
+/*   Updated: 2019/10/17 15:50:12 by mahmidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <unistd.h>
 #include "libft.h"
 
 int main()
 {
-	ft_putchar_fd('a', 1);
-	ft_putnbr(ft_atoi("445"));
+	//	ft_putchar('a();
+	//ft_putnbr(3);	
+	printf("%d",ft_putnbr(3));
 	return 0;
 }

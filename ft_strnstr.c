@@ -6,13 +6,13 @@
 /*   By: mahmidi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 07:37:11 by mahmidi           #+#    #+#             */
-/*   Updated: 2019/10/17 07:49:35 by mahmidi          ###   ########.fr       */
+/*   Updated: 2019/10/17 15:37:43 by mahmidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *s1, const char *s2)
+char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 	char	*j;

@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mahmidi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/17 05:50:18 by mahmidi           #+#    #+#             */
-/*   Updated: 2019/10/17 15:39:16 by mahmidi          ###   ########.fr       */
+/*   Created: 2019/10/17 11:19:12 by mahmidi           #+#    #+#             */
+/*   Updated: 2019/10/17 13:41:20 by mahmidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	ft_putstr_fd(char *s, int fd)
 {
-	while ((unsigned char)*s1 == (unsigned char)*s2 && n--)
-	{
-		if (*s1 == '\0' || *s2 == '\0')
-			return (0);
-		s1++;
-		s2++;
-	}
-	if (!n)
-		return (((unsigned char)*--s1 - (unsigned char)*--s2));
-	return ((unsigned char)*s1 - (unsigned char)*s2);
+	if (s)
+		write(fd, s, ft_strlen(s));
 }
