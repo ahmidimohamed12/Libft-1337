@@ -13,22 +13,22 @@
 #include <unistd.h>
 #include "libft.h"
 
-char    *ft_strcat(char *s1,char const *s2)
+
+char	*ft_strcat(char *dest, const char *src)
 {
-    int i;
-    int j;
+	unsigned int	i;
+	unsigned int	j;
 
-    j = 0;
-    i = 0;
-    while (s1[i] != '\0')
-        i++;
-    while (s2[j] != '\0')
-    {
-        s1[i] = s2[j];
-        j++;
-        i++;
-    }
-
-    s1[i] = '\0';
-    return (s1);    
+	i = 0;
+	while (dest[i] != '\0')
+		++i;
+	j = 0;
+	while (src[j] != '\0')
+	{
+		dest[i] = src[j];
+		i++;
+		++j;
+	}
+	dest[i] = '\0';
+	return (dest);
 }

@@ -10,23 +10,27 @@
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = ft_*.c
 
-NAME = libft.a
-FLAGS = -Wall -Wextra -Werror
 
-$(NAME) : all
+NAME=libft.a
 
-all:
-	gcc $(FLAGS) -c $(SRCS)
-	ar rcs $(NAME) \
-		*.o
+SRCS=ft_*.c
+
+OBJECTS=ft_*.o
+
+INCLUDES=./
+
+all: $(NAME)
+
+$(NAME): $(SRCS) libft.h
+	@gcc -Wall -Wextra -Werror -I$(INCLUDES) -c $(SRCS)
+	@ar rc $(NAME) $(OBJECTS)
+	@ranlib $(NAME)
+
 clean:
-	/bin/rm -f *.o
+	@/bin/rm -f $(OBJECTS)
 
 fclean: clean
-	/bin/rm -f libft.a
+	@/bin/rm -f $(NAME)
 
 re: fclean all
-
-

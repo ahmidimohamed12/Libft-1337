@@ -14,22 +14,13 @@
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_substr(char *src, int n, int len)
-{
-	char *ssrc;
-	int i;
 
-	if (!src)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
+{
+	char			*result;
+
+	if (!s || !(result = ft_memalloc(len + 1)))
 		return (NULL);
-	ssrc = malloc((len + 1) * sizeof(char));
-	i = 0;
-	if (!ssrc)
-		return (NULL);
-	while (len--)
-	{
-		ssrc[i] = src[n];	
-		len--;
-		n++;
-	}
-	return (ssrc);
+	result = ft_strncpy(result, (char*)s + start, len);
+	return (result);
 }

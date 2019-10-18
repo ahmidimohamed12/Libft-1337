@@ -13,16 +13,17 @@
 
 #include <unistd.h>
 #include "libft.h"
-#include <string.h>
 
-char    *ft_strnew(int  t)
+
+char	*ft_strnew(size_t size)
 {
-    char    *text;
-    
-    text = (char *)malloc((t + 1) * sizeof(char));
-    if(!text)
-        return (NULL);
-    ft_bzero(text,t);
-    text[t] = '\0';
-    return (text);
+	size_t	i;
+	char	*string;
+
+	if (!(string = ft_memalloc(size + 1)))
+		return (NULL);
+	i = 0;
+	while (i < size)
+		string[i++] = '\0';
+	return (string);
 }
