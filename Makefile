@@ -6,11 +6,11 @@
 #    By: mahmidi <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/17 14:40:16 by mahmidi           #+#    #+#              #
-#    Updated: 2019/10/17 16:27:32 by mahmidi          ###   ########.fr        #
+#    Updated: 2019/10/18 12:58:01 by mahmidi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = ft_strlen.c
+SRCS = ft_*.c
 
 NAME = libft.a
 FLAGS = -Wall -Wextra -Werror

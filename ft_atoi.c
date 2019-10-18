@@ -6,7 +6,7 @@
 /*   By: mahmidi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 05:25:43 by mahmidi           #+#    #+#             */
-/*   Updated: 2019/10/17 09:57:40 by mahmidi          ###   ########.fr       */
+/*   Updated: 2019/10/18 09:21:09 by mahmidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ long	ft_atoi(const char *str)
 	long	nbr;
 
 	sign = 1;
-	while (*str == ' ' || *str == '\f' || *str == '\n' || *str =='\r' ||
-			*str == '\t' || *str== '\v')
+	while (*str == ' ' || *str == '\f' || *str == '\n' || *str == '\r' ||
+			*str == '\t' || *str == '\v')
 		str++;
 	if (*str == '-' || *str == '+')
 	{
@@ -33,5 +33,5 @@ long	ft_atoi(const char *str)
 		nbr = nbr * 10 + *str - '0';
 		str++;
 	}
-	return	(sign * nbr);
+	return (sign * nbr);
 }

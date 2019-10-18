@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mahmidi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/17 11:19:12 by mahmidi           #+#    #+#             */
-/*   Updated: 2019/10/18 08:36:26 by mahmidi          ###   ########.fr       */
+/*   Created: 2019/10/18 12:00:57 by mahmidi           #+#    #+#             */
+/*   Updated: 2019/10/18 12:00:59 by mahmidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+
+char    *ft_strcpy(char *dest, char *src)
 {
-	if (s)
-		write(fd, s, ft_strlen(s));
+    if (!src)
+        return (NULL);
+    while (*src != '\0')
+        *dest = *src;
+    return (dest);
 }

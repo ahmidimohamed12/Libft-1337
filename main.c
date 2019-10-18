@@ -6,7 +6,7 @@
 /*   By: mahmidi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 16:41:20 by mahmidi           #+#    #+#             */
-/*   Updated: 2019/10/17 15:50:12 by mahmidi          ###   ########.fr       */
+/*   Updated: 2019/10/18 11:24:38 by mahmidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@
 
 int main()
 {
-	//	ft_putchar('a();
-	//ft_putnbr(3);	
-	printf("%d",ft_putnbr(3));
-	return 0;
+	printf("%d",ft_tolower('a'));
+	printf("%d",ft_toupper('A'));
+return 0;
 }

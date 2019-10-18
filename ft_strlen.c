@@ -5,15 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mahmidi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/16 16:33:44 by mahmidi           #+#    #+#             */
-/*   Updated: 2019/10/17 15:33:33 by mahmidi          ###   ########.fr       */
+/*   Created: 2019/10/18 11:01:03 by mahmidi           #+#    #+#             */
+/*   Updated: 2019/10/18 11:07:04 by mahmidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
-int	ft_strlen(char	*str)
+int	ft_strlen(char *str)
 {
 	int	i;
 	i = 0;

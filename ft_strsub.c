@@ -1,20 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mahmidi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/17 11:19:12 by mahmidi           #+#    #+#             */
-/*   Updated: 2019/10/18 08:36:26 by mahmidi          ###   ########.fr       */
+/*   Created: 2019/10/18 09:34:18 by mahmidi           #+#    #+#             */
+/*   Updated: 2019/10/18 10:05:48 by mahmidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdlib.h>
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+char	*ft_substr(char *src, int n, int len)
 {
-	if (s)
-		write(fd, s, ft_strlen(s));
+	char *ssrc;
+	int i;
+
+	if (!src)
+		return (NULL);
+	ssrc = malloc((len + 1) * sizeof(char));
+	i = 0;
+	if (!ssrc)
+		return (NULL);
+	while (len--)
+	{
+		ssrc[i] = src[n];	
+		len--;
+		n++;
+	}
+	return (ssrc);
 }

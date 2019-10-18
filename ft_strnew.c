@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mahmidi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/17 11:19:12 by mahmidi           #+#    #+#             */
-/*   Updated: 2019/10/18 08:36:26 by mahmidi          ###   ########.fr       */
+/*   Created: 2019/10/18 11:50:29 by mahmidi           #+#    #+#             */
+/*   Updated: 2019/10/18 12:47:14 by mahmidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include <unistd.h>
 #include "libft.h"
+#include <string.h>
 
-void	ft_putstr_fd(char *s, int fd)
+char    *ft_strnew(int  t)
 {
-	if (s)
-		write(fd, s, ft_strlen(s));
+    char    *text;
+    
+    text = (char *)malloc((t + 1) * sizeof(char));
+    if(!text)
+        return (NULL);
+    ft_bzero(text,t);
+    text[t] = '\0';
+    return (text);
 }

@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mahmidi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/17 11:19:12 by mahmidi           #+#    #+#             */
-/*   Updated: 2019/10/18 08:36:26 by mahmidi          ###   ########.fr       */
+/*   Created: 2019/10/16 16:41:20 by mahmidi           #+#    #+#             */
+/*   Updated: 2019/10/18 08:36:41 by mahmidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <unistd.h>
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+int main()
 {
-	if (s)
-		write(fd, s, ft_strlen(s));
+	//	ft_putchar('a();
+	//ft_putnbr(3);	
+	ft_putnbr_fd(3);
+	return 0;
 }
